@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CatLovers: uma comunidade para amantes de gatos!">
+    <title>CatLovers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>CatLovers</h1>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#racas">Raças</a>
+        <a href="#comunidade">Comunidade</a>
+        <a href="#cadastro">Criar conta</a>
+    </nav>
+
+    <button id="temaBtn" type="button">
+         Modo escuro
+    </button>
+</header>
+
+<main>
+
+    <!-- INÍCIO -->
+    <section id="inicio" class="hero">
+        <h2>Bem-vindo ao mundo dos gatinhos! 🐾</h2>
+
+        <p>
+            Compartilhe momentos, conheça raças e encontre
+            tudo para deixar seu gatinho feliz.
+        </p>
+
+        <a href="#comunidade" class="botao">
+            Conhecer gatinhos
+        </a>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section id="produtos">
+        <h2>🛍️ Produtos para seu gatinho</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=Caminha"
+                     alt="Caminha para gatos">
+
+                <h3>Caminha fofinha</h3>
+                <p>Conforto para seu gatinho.</p>
+                <strong>R$ 89,90</strong>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=Brinquedo"
+                     alt="Brinquedo para gatos">
+
+                <h3>Brinquedo de gato</h3>
+                <p>Diversão garantida!</p>
+                <strong>R$ 29,90</strong>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=Coleira"
+                     alt="Coleira para gatos">
+
+                <h3>Coleira estilosa</h3>
+                <p>Deixe seu gato ainda mais lindo.</p>
+                <strong>R$ 19,90</strong>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RAÇAS -->
+    <section id="racas">
+        <h2>Conheça algumas raças</h2>
+
+        <div class="pesquisa">
+            <input
+                type="text"
+                id="pesquisaRaca"
+                placeholder="🔎 Pesquisar uma raça..."
+                aria-label="Pesquisar raça de gato"
+            >
+        </div>
+
+        <p id="resultadoPesquisa"></p>
+
+        <div class="cards" id="listaRacas">
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=Gato"
+                     alt="Gato persa">
+
+                <h3>Persa</h3>
+                <p>Pelagem longa e personalidade tranquila.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=Gato
+                     alt="Gato siamês">
+
+                <h3>Siamês</h3>
+                <p>Carinhoso, comunicativo e elegante.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=Maine+Coon"
+                     alt="Gato Maine Coon">
+
+                <h3>Maine Coon</h3>
+                <p>Grande, peludo e muito amigável.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=Angorá"
+                     alt="Gato Angorá">
+
+                <h3>Angorá</h3>
+                <p>Elegante, curioso e brincalhão.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=Ragdoll"
+                     alt="Gato Ragdoll">
+
+                <h3>Ragdoll</h3>
+                <p>Conhecido por ser dócil e tranquilo.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://placehold.co/300x200?text=British+Shorthair"
+                     alt="British Shorthair">
+
+                <h3>British Shorthair</h3>
+                <p>Pelagem densa e temperamento calmo.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COMUNIDADE -->
+    <section id="comunidade">
+        <h2>Comunidade dos gatinhos</h2>
+
+        <p>
+            Mostre seu companheiro para todo mundo!
+        </p>
+
+        <form id="postForm">
+
+            <input
+                type="text"
+                id="nomeGato"
+                placeholder="Nome do seu gatinho"
+                maxlength="40"
+                required
+            >
+
+            <input
+                type="text"
+                id="racaGato"
+                placeholder="Raça do gatinho"
+                maxlength="40"
+            >
+
+            <input
+                type="file"
+                id="fotoGato"
+                accept="image/jpeg,image/png,image/webp"
+                required
+            >
+
+            <textarea
+                id="descricao"
+                placeholder="Conte algo sobre seu gatinho..."
+                maxlength="300"
+            ></textarea>
+
+            <button type="submit">
+                Publicar foto 🐾
+            </button>
+
+        </form>
+
+        <h3>Gatinhos publicados</h3>
+
+        <div id="galeria" class="cards"></div>
+    </section>
+
+    <!-- CADASTRO -->
+    <section id="cadastro">
+        <h2>Crie sua conta</h2>
+
+        <form id="cadastroForm">
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Seu nome"
+                maxlength="60"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Seu e-mail"
+                required
+            >
+
+            <input
+                type="password"
+                id="senha"
+                placeholder="Sua senha"
+                minlength="6"
+                required
+            >
+
+            <button type="submit">
+                Cadastrar
+            </button>
+
+        </form>
+
+        <p id="mensagem"></p>
+    </section>
+
+</main>
+
+<footer>
+    <h3>CatLovers</h3>
+
+    <p>
+        Feito com amor para todos os amantes de gatos.
+    </p>
+
+    <p>© Kevin Felipe</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
